@@ -69,12 +69,12 @@
     border-radius: 50%;
 }
 
-.ex-7-img, .ex-8-img, .ex-9-img{
+.ex-7-img{
     transition: filter 2s;
 }
 
-.ex-8-img, .ex-9-img {
-    transition: border-radius 2s;
+.ex-8-img {
+    transition: border-radius 2s, filter 2s;
 }
 
 .ex-9-img {
@@ -84,10 +84,10 @@
 
 .ex-9-img:hover{
     transform: scale(1.5);
-}
+    }
 
-.ex-9-img{
-    transition: scale 2s;
+.ex-9-img {
+    transition: border-radius 2s, filter 2s, scale 2s;
 }
 
 .ex-10-icon {
@@ -144,7 +144,37 @@
     text-decoration: none;
 }
 
+.ex-12-button:hover .ex-12-top-white {
+    animation: move-topbutton 2s linear;
+}
 
+@keyframes move-topbutton {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        left: 10%;
+    }
+}
+
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: move-botbutton 2s linear;
+}
+
+@keyframes move-botbutton {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
 
 .ex-12-top-white, .ex-13-top-white {
     position: absolute;
@@ -154,6 +184,40 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-13-button:hover .ex-13-top-white {
+    animation: move-topbutton 2s linear;
+}
+
+@keyframes move-topbutton-2 {
+    0% {
+        left: 10%;
+    }
+    50% {
+        left: calc(100% - 60px);
+    }
+    100% {
+        bottom: 10%;
+    }
+}
+
+.ex-13-button:hover .ex-13-bottom-white {
+    animation: move-botbutton 2s linear;
+}
+
+@keyframes move-botbutton-2 {
+    0% {
+        right: 20%;
+    }
+    50% {
+        right: calc(100% - 60px);
+    }
+    100% {
+        right: 20%;
+    }
+}
+
+
 .ex-12-bottom-white, .ex-13-bottom-white {
     position: absolute;
     bottom: -10px;
